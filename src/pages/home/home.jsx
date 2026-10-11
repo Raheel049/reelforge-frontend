@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import styles from './Home.module.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function ReelForgeLanding() {
   const [activeTab, setActiveTab] = useState('script-gen');
+
+  const navigate = useNavigate()
 
   return (
     <div className={styles.container}>
@@ -26,7 +29,7 @@ export default function ReelForgeLanding() {
         </div>
 
         <div className={styles.navActions}>
-          <button className={styles.signInBtn}>Sign In</button>
+          <button className={styles.signInBtn}  onClick={() => {navigate("/login")}}>Sign In</button>
           <button className={styles.ctaBtn}>Start Forging →</button>
         </div>
       </nav>

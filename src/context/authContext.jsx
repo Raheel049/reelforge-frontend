@@ -14,6 +14,7 @@ export const AuthProvider = ({ children }) => {
         const response = await api.get('/auth/get-me');
         if (response.data?.status && response.data?.user) {
           setUser(response.data.user);
+          console.log(response.data.user);
         } else {
           setUser(null);
         }

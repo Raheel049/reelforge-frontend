@@ -9,7 +9,7 @@ export default function PublicOnlyRoute() {
   if (isLoading) return null;
 
   if (isAuthenticated) {
-    return <Navigate to="/studio" replace />;
+    return <Navigate to="/dashboard" replace />;
   }
 
   return <Outlet />;

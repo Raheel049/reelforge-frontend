@@ -151,7 +151,7 @@ const SignUp = () => {
             disabled={isLoading}
           >
             {isLoading
-              ? `<Loader fullScreen={"true"} text='Sign Up... />`
+              ? <Loader fullScreen={"true"} text='Sign Up...' />
               : "Sign Up"}
           </button>
         </form>
